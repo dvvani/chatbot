@@ -9,7 +9,7 @@ pipeline{
     stage("Dev deploy"){
       steps{
         when{
-          branch"develop"
+          branch "develop"
         }
         echo "Deploy to develop"
       }
@@ -17,7 +17,7 @@ pipeline{
     stage("test deploy"){
       steps{
         when{
-          branch"test"
+          branch "test"
         }
         echo "deploy to test"
       }
@@ -25,7 +25,7 @@ pipeline{
     stage("prod deploy"){
       steps{
         when{
-          branch"main"
+          branch "main"
         }
         echo "ddeploy to main"
       }
