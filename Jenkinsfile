@@ -7,26 +7,26 @@ pipeline{
       }
     }
     stage("Dev deploy"){
-      steps{
-        when{
+       when{
           branch "develop"
         }
+      steps{
         echo "Deploy to develop"
       }
     }
     stage("test deploy"){
-      steps{
-        when{
+      when{
           branch "test"
         }
+      steps{
         echo "deploy to test"
       }
     }
     stage("prod deploy"){
-      steps{
-        when{
+      when{
           branch "main"
         }
+      steps{
         echo "ddeploy to main"
       }
     }
